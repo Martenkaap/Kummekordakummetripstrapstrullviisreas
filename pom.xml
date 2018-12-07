@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ee.martenkaap</groupId>
+    <artifactId>Kummekordakummetripstrapstrullviisreas</artifactId>
+    <version>1.0</version>
+
+    <packaging>war</packaging>
+
+    <dependencies>
+        <!--
+          Siia lisame teegid ja raamatukogud, mida soovime oma rakendusele lisada
+          Lihtsustatult, tõmbab see juurde uusi klasse, mida saab java klassides import-de abil kasutada.
+          Nagu pythonis pidi mingeid mooduleid,pakke juurde installima.
+
+          Need teegid vaikimisi tõmmatakse antud lehelt: https://mvnrepository.com/artifact/
+          Lehti kust tõmmata saab ka juurde lisada, aga sul ei tohiks seda lähiajal vaja minna
+        -->
+        <dependency>
+            <!-- groupId ja artifactId ütlevad mis nimega pakki tõmmata. Versioon ütleb versiooni -->
+            <!-- See teek tuleb lehelt: https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api/4.0.1 -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+            <!--
+              provided tähendab, et me soovime rakenduse kokku ehitamise ajal neid klasse kasutada,
+              kuid ära neid rakendusi war-i enda sisse kaasa pane, sest tomcat-l endal on need klassid juba olemas.
+              Kui võtame "scope" rea ära, siis ta paneb need klassid kaasa ja siis jookseb rakendus kokku, kuna
+              sama klass leitakse kahest kohast.
+            -->
+        </dependency>
+    </dependencies>
+
+</project>

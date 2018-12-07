@@ -1,0 +1,22 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <!--
+      Loome tomcat-i jaoks uue servlet,
+      millele anname suvalise nime ja ütleme mis klassis servleti "sisu" on.
+      Hea tava on siiski anda servlet-i endaga sarnane nimi.
+      Nii et parem nimi oleks näiteks "helloServlet" või "HelloServlet"
+      -->
+    <servlet>
+        <servlet-name>meieServletMillelSuvakasNimi</servlet-name>
+        <servlet-class>ee.martenkaap.Mang</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>meieServletMillelSuvakasNimi</servlet-name>
+        <url-pattern>/mang</url-pattern>
+    </servlet-mapping>
+
+</web-app>
